@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"get_damaged_func",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_damaged_func",
+  "parent":{
+    "name":"Functions",
+    "path":"folders/Functions.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

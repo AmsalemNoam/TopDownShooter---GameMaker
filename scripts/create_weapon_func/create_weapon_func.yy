@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"create_weapon_func",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"create_weapon_func",
+  "parent":{
+    "name":"Functions",
+    "path":"folders/Functions.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
