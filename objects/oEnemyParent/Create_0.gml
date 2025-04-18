@@ -1,2 +1,4 @@
 event_inherited();
-get_damaged_create(10);
+hp = 10;
+get_damaged_create(hp);
+global.totalEnenemiesSpawend++;

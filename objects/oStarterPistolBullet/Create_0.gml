@@ -10,3 +10,4 @@ dirFix = false;
 maxDist = 250;
 destroy = false;
 enemyDestroy = true;
+hitVFX = false;

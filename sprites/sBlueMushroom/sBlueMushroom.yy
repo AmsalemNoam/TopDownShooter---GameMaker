@@ -25,7 +25,7 @@
   ],
   "name":"sBlueMushroom",
   "nineSlice":null,
-  "origin":7,
+  "origin":9,
   "parent":{
     "name":"BlueMushroom",
     "path":"folders/Sprites/Enemies/BlueMushroom.yy",
@@ -86,7 +86,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":5,
-    "yorigin":12,
+    "yorigin":10,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

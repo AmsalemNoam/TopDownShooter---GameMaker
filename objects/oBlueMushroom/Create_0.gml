@@ -12,12 +12,17 @@ face = 1;
 //State machine
 state = 0;
 	//Shoot
-	cooldownTime = 4*60;
+	cooldownTime = 8*60;
 	shootTimer = irandom(cooldownTime);
-	windUpTime = 60;
+	windUpTime = 2*60;
 	recoverTime = 45;
 	bulletInst = noone;
 	
 	bulletXOff=10;
 	bulletYOff=6;
+	
+	
+//Spawn From tree
+fadeSpd = 1/15;
+emergeSpd = 0.25;
 

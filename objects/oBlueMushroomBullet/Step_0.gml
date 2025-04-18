@@ -1,3 +1,7 @@
+//Pause Self
+if screen_pause() == true {exit;}
+
+
 switch(state)
 {
 	case 0:
@@ -26,7 +30,11 @@ switch(state)
 	if (hitConfirm == true && playerDestroy == true){destroy =true;} 
 	
 	//Destroy
-		if (destroy == true){instance_destroy();}
+		if (destroy == true)
+		{
+			create_animated_vfx(x,y,depth-50,sMushroomBulletHit,0.5,0.5);
+			instance_destroy();
+		}
 	//Collision
 		if place_meeting(x,y,oSolidWall){destroy = true;}
 	//bullet out of range

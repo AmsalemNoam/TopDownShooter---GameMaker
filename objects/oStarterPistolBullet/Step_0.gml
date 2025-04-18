@@ -1,3 +1,5 @@
+//Pause Self
+if screen_pause() == true {exit;}
 
 //Move The Bullet
 	xspd = lengthdir_x(spd,dir);
@@ -6,13 +8,18 @@
 	x+= xspd;
 	y+= yspd;
 
+depth =-y;
 //cleanup
 
 	//hit confim destroy
 	if (hitConfirm == true && enemyDestroy == true){destroy =true;} 
 	
 	//Destroy
-		if (destroy == true){instance_destroy();}
+		if (destroy == true)
+		{
+			create_animated_vfx(x,y,depth-50,sBulletHit);
+			instance_destroy();
+		}
 	//Collision
 		if place_meeting(x,y,oSolidWall){destroy = true;}
 	//bullet out of range

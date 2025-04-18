@@ -5,12 +5,29 @@
 	var rightKey = global.rightKey
 	var shootKey =global.shootKey
 	var swapKeyPressed = global.swapKeyPressed
+	var startKeyPressed = global.startKeyPressed;
+
+//Pause Menu
+if startKeyPressed
+{
+	if !instance_exists(oPauseMenu)
+	{
+		instance_create_depth(0,0,0,oPauseMenu);
+	}
+	else
+	{
+		instance_destroy(oPauseMenu);
+	}
+}
+
+//Pause Self
+if screen_pause() == true {exit;}
 
 //Player Movement
 #region
 	//get direction
-	var _horizKey = rightKey - leftKey;
-	var _vertiKey = downKey - upKey;
+	var _horizKey = global.xaxisLeft;
+	var _vertiKey = global.yaxisLeft;
 	moveDir = point_direction(0, 0, _horizKey, _vertiKey);
 	  
 	//get x and y speeds
@@ -39,14 +56,24 @@
 #endregion
 
 //Get Dmg
-get_damaged(oDmgPlayer,true);
+if get_damaged(oDmgPlayer,true)
+{
+	instance_create_depth(0,0,0,oHitScreen);
+	create_screen_pause(20);
+	screen_shake(5);
+}
 
 //Sprite Control
 #region
 	
 	//Player Aim
 		centerY = y+centerYOffset;
-		aimDir = point_direction(x,centerY,mouse_x,mouse_y);
+		if global.controllerMode == 0 {aimDir = point_direction(x,centerY,mouse_x,mouse_y);} //Using Keyboard
+		//using controller
+		if global.controllerMode == 1 
+		{
+			if global.xaxisRight != 0 || global.yaxisRight !=0{aimDir = point_direction(0,0,global.xaxisRight,global.xaxisLeft);}
+		}
 
 	//player facing correctly
 		face = round(aimDir/90);
@@ -85,12 +112,17 @@ get_damaged(oDmgPlayer,true);
 	{
 		//reset Timer
 		shootTimer = weapon.cooldown;
+		
 		//create the Bullet
 			var _xOffset = lengthdir_x(weapon.length + weaponOffSetDist,aimDir);
 			var _yOffset = lengthdir_y(weapon.length + weaponOffSetDist,aimDir);
 			
 			var _spread = weapon.spread;
 			var _spreadDiv = _spread/max(weapon.bulletNum-1,1);
+			
+			//Shoot VFX
+			create_animated_vfx(x+ _xOffset,centerY+_yOffset,depth-10,weapon.SplashSprite,1,1,aimDir);
+			
 			
 			for(var i = 0; i<weapon.bulletNum; i++){
 				var _bulletInst = instance_create_depth(x+ _xOffset,centerY+_yOffset,depth-100,weapon.bulletObj);
@@ -116,7 +148,9 @@ get_damaged(oDmgPlayer,true);
 //Death
 if hp <= 0 
 {
+	
 	instance_create_depth(0,0,-10000,oGameOverScreen);
+	create_animated_vfx(x,y,depth,sSmallExplosion,1.5,1.5);
 	instance_destroy();
 	
 }

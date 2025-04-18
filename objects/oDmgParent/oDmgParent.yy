@@ -8,8 +8,8 @@
   "name":"oDmgParent",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"GameControl",
+    "path":"folders/Objects/GameControl.yy",
   },
   "parentObjectId":null,
   "persistent":false,

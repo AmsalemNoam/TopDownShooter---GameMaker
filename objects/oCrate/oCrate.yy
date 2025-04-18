@@ -10,8 +10,8 @@
   "name":"oCrate",
   "overriddenProperties":[],
   "parent":{
-    "name":"Walls",
-    "path":"folders/Objects/Walls.yy",
+    "name":"Crates",
+    "path":"folders/Objects/Walls/Crates.yy",
   },
   "parentObjectId":{
     "name":"oSolidWall",

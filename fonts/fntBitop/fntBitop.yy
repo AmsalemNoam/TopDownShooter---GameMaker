@@ -119,8 +119,8 @@
   "maintainGms1Font":false,
   "name":"fntBitop",
   "parent":{
-    "name":"TopDownShooterTutorial",
-    "path":"TopDownShooterTutorial.yyp",
+    "name":"Fonts",
+    "path":"folders/Fonts.yy",
   },
   "pointRounding":0,
   "ranges":[
@@ -134,10 +134,7 @@
   "sdfSpread":8,
   "size":8.0,
   "styleName":"Regular",
-  "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
-  },
+  "textureGroupId":null,
   "TTFName":"",
   "usesSDF":false,
 }

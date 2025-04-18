@@ -1,5 +1,8 @@
 
-function create_weapon(_sprite = sStarterPistol,_weponLength = 0,_bulletObj = oStarterPistolBullet,_cooldown = 1 ,_bulletNum = 1, _spread = 0) constructor{
+function create_weapon(_sprite = sStarterPistol,_weponLength = 0,_bulletObj = oStarterPistolBullet,
+_cooldown = 1 ,_bulletNum = 1, _spread = 0,
+_splashSprite = noone
+) constructor{
 	
 	sprite = _sprite;
 	length = _weponLength;
@@ -7,6 +10,7 @@ function create_weapon(_sprite = sStarterPistol,_weponLength = 0,_bulletObj = oS
 	cooldown = _cooldown;
 	bulletNum = _bulletNum;
 	spread = _spread;
+	SplashSprite = _splashSprite;
 	
 }
 
@@ -23,7 +27,8 @@ global.WeaponList = {
 		oStarterPistolBullet,
 		20,
 		1,
-		0
+		0,
+		sShootSplash
 	),
 	
 	StarterPistolUpgrade : new create_weapon(
@@ -32,7 +37,8 @@ global.WeaponList = {
 		oStarterPistolBulletUpgrade,
 		16,
 		1,
-		0
+		0,
+		sShootSplash
 	),
 	StarterShotgun : new create_weapon(
 		sStarterShotgun,

@@ -32,4 +32,5 @@
 	
 	
 //Dmg
-get_damaged_create(5,true);
+hp = 20;
+get_damaged_create(hp,true);
