@@ -1,4 +1,4 @@
-if place_meeting(x,y,oPlayer) && !instance_exists(oWarp)
+if (place_meeting(x,y,oPlayer) && !instance_exists(oWarp))
 {
 	var _inst = instance_create_depth(x,y,-99999,oWarp);
 	

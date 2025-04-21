@@ -104,8 +104,7 @@
 		return _hitConfirm;
 		
 	}
-	
-	
+		
 	
 	//Dmg cleanup event
 	function get_damaged_cleanup()

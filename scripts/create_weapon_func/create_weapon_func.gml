@@ -1,7 +1,7 @@
 
 function create_weapon(_sprite = sStarterPistol,_weponLength = 0,_bulletObj = oStarterPistolBullet,
 _cooldown = 1 ,_bulletNum = 1, _spread = 0,
-_splashSprite = noone
+_splashSprite = sShootSplash
 ) constructor{
 	
 	sprite = _sprite;

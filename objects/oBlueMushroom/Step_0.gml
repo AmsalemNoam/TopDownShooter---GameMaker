@@ -87,7 +87,7 @@ var _getDmg = true;
 
 
 
-//Chase Player
+//Sprite Looks
 
 	xspd = lengthdir_x(spd,dir);
 	yspd = lengthdir_y(spd,dir);
